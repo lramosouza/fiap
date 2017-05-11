@@ -2,6 +2,8 @@ package br.com.fiap.contas;
 
 import java.math.BigDecimal;
 
+import br.com.fiap.enumeration.ClassificacaoClienteEnum;
+
 public class ContaBancaria {
 	private static final BigDecimal TAXA_BANCARIA = BigDecimal.ONE;
 	
@@ -40,6 +42,5 @@ public class ContaBancaria {
 		BigDecimal taxaDias = getTaxaBancaria().multiply(new BigDecimal(dias));
 		return taxaDias.add((new BigDecimal(meses).multiply(new BigDecimal(30))));
 	}
-	
 	
 }

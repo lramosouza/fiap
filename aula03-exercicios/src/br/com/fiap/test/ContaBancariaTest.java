@@ -7,6 +7,7 @@ import java.math.BigDecimal;
 import org.junit.Test;
 
 import br.com.fiap.contas.ContaBancaria;
+import br.com.fiap.enumeration.ClassificacaoClienteEnum;
 
 public class ContaBancariaTest {
 	ContaBancaria conta= new ContaBancaria(null, null, null);
@@ -18,6 +19,10 @@ public class ContaBancariaTest {
 		assertEquals(taxa, conta.getTaxaBancaria());
 		assertEquals(new BigDecimal(5),conta.getTaxaBancaria(dias.intValue()));
 		assertEquals(new BigDecimal(35), conta.getTaxaBancaria(dias.intValue(), meses.intValue()));
+		conta.deposita(400000.00);
+		assertEquals(true, ClassificacaoClienteEnum.POTENCIAL.isCompatible(conta));
+		conta.saque(450000.00);
+		assertEquals(false, ClassificacaoClienteEnum.POTENCIAL.isCompatible(conta));
 	}
 
 }
