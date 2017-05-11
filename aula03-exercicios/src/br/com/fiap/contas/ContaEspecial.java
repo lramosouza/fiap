@@ -2,6 +2,11 @@ package br.com.fiap.contas;
 
 public class ContaEspecial extends ContaBancaria{
 	
+	public ContaEspecial(String nomeCliente, String endCliente, String cpfCliente) {
+		super(nomeCliente, endCliente, cpfCliente);
+		// TODO Auto-generated constructor stub
+	}
+
 	public void saque(double valor) {
 		super.saque(calculaValorSaque(valor));
 	}

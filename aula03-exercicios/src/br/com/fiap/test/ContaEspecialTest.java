@@ -7,7 +7,7 @@ import junit.framework.Assert;
 
 @SuppressWarnings("deprecation")
 public class ContaEspecialTest {
-	ContaEspecial contaE = new ContaEspecial();
+	ContaEspecial contaE = new ContaEspecial(null, null, null);
 
 	@Test
 	public void test() {
