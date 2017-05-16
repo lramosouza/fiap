@@ -1,6 +1,7 @@
 package br.com.fiap.contas;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 
 public class ContaBancaria {
 	private static final BigDecimal TAXA_BANCARIA = BigDecimal.ONE;
@@ -9,14 +10,18 @@ public class ContaBancaria {
 	protected String endCliente;
 	protected String cpfCliente;
 	protected double saldo;
+	protected LocalDate dataCriacaoConta;
+	protected LocalDate dataNascimento;
 	
-	public ContaBancaria (String nomeCliente, String endCliente, String cpfCliente){
+	public ContaBancaria (String nomeCliente, String endCliente, String cpfCliente, LocalDate dataCriacaoConta, LocalDate dataNascimento){
 		super();
 		this.nomeCliente = nomeCliente;
 		this.endCliente = endCliente;
 		this.cpfCliente = cpfCliente;
+		this.dataCriacaoConta = dataCriacaoConta;
+		this.dataNascimento = dataNascimento;
 	}
-	public void saque(double valor) {
+	public void saque(double valor, LocalDate dataCriacaoConta) {
 		saldo -= valor;
 	}
 
