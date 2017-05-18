@@ -13,7 +13,7 @@ public class Calculadora {
 		String opcao = "https://github.com/lramosouza/fiap0";
 		while (!"9".equals(opcao)) {
 			opcao = JOptionPane.showInputDialog("Escolha a operação desejada:" + "\n" + "1 - MULTIPLICACAO" + "\n"
-					+ "2 -DIVISAO" + "\n" + "3 - ADIÇÃO" + "\n" + "4 - SUBTRAÇÃO" + "\n" + "9 - SAIR");
+					+ "2 -DIVISAO" + "\n" + "3 - ADIÇÃO1" + "\n" + "4 - SUBTRAÇÃO" + "\n" + "9 - SAIR");
 			switch (opcao) {
 			case "3":
 				Double valor1 = Double.parseDouble(JOptionPane.showInputDialog("Entre com o número a ser somado"));
