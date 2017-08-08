@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Login</title>
 </head>
-<body>
+<body> 
 <h2>Bem Vindo a este sistema</h2>
 <form action="login.jsp" method="get">
 	Login:<input type="text" name="nome">
