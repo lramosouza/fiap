@@ -15,8 +15,8 @@ public class PessoaAction extends ActionSupport {
 	private static List<PessoaBean> pessoa = new ArrayList<PessoaBean>();
 	private String mensagem;
 
-	public PessoaAction() {
-		pessoa = pessoa;
+	public PessoaAction(List<PessoaBean> pessoa) {
+		pessoa = PessoaAction.pessoa;
 	}
 
 	@Action(value = "/cadastrar", results = { @Result(name = "success", location = "/cadastro.jsp"),
